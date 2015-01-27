@@ -1,7 +1,7 @@
 <?php
 /* @var $this AppController */
 
-$this->pageTitle=Yii::app()->name . ' - Cek Stok';
+$this->pageTitle=Yii::app()->name . ' - Cek Stok'; 
 $this->breadcrumbs=array(
 	'Cek Stok',
 );
