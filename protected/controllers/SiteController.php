@@ -138,7 +138,8 @@ class SiteController extends Controller
 
 	public function actionImportStok()
 	{
-		$this->render('ImportStok');
+		Yii::app()->user->setFlash('success', "Ini adalah percobaan menggunakan Alert");
+		$this->render('ImportStok');		
 	}
 
 	public function actionTentangKami()

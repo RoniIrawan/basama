@@ -22,7 +22,8 @@ $this->breadcrumbs=array(
 			<div class="well well-large">				
 				<img src="<?php echo Yii::app()->request->baseUrl;?>/images/dbjava.png" width="175" height="175" alt="IMPORT STOK JAVA SEVEN" /><br><br>
 				<div class="form-group">
-				    <input type="file" id="exampleInputFile">
+				    <p><input type="file" id="exampleInputFile"></p>
+				    <p><button class="btn btn-large btn-primary" type="button">Import data stok</button></p>
 				</div>
 			</div>
 		</div>
@@ -30,7 +31,8 @@ $this->breadcrumbs=array(
 			<div class="well well-large">				
 				<img src="<?php echo Yii::app()->request->baseUrl;?>/images/dbcbr.png" width="175" height="175" alt="IMPORT STOK CBR SIX" /><br><br>
 				<div class="form-group">
-				    <input type="file" id="exampleInputFile">
+				    <p><input type="file" id="exampleInputFile"></p>
+				    <p><button class="btn btn-large btn-primary" type="button">Import data stok</button></p>
 				</div>
 			</div>
 		</div>
@@ -38,7 +40,8 @@ $this->breadcrumbs=array(
 			<div class="well well-large">				
 				<img src="<?php echo Yii::app()->request->baseUrl;?>/images/dbsoga.png" width="175" height="175" alt="IMPORT STOK BSM SOGA" /><br><br>
 				<div class="form-group">
-				    <input type="file" id="exampleInputFile">
+				    <p><input type="file" id="exampleInputFile"></p>
+				    <p><button class="btn btn-large btn-primary" type="button">Import data stok</button></p>
 				</div>
 			</div>
 		</div>

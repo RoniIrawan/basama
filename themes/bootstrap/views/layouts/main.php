@@ -39,8 +39,23 @@
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 
+
+
 	<?php echo $content; ?>
 
+<!-- 	<?php 
+		$flashMessages = Yii::app()->user->getFlashes();
+		if ($flashMessages) {
+			foreach ($flashMessages as $key => $message) { ?>
+				<script type="text/javascript">$(".alert").alert('close');</script>
+				<div class="alert alert-success">
+				    <button type="button" class="close" data-dismiss="alert">&times;</button>
+				    <strong>Peringatan! </strong><?php echo $message; ?>
+			    </div>	
+			<?php }
+		}
+	 ?> -->
+	 
 	<div class="clear"></div>
 
 	<div id="footer">
