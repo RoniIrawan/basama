@@ -1,4 +1,4 @@
-<?php
+<?php 
 /* @var $this AppController */
 
 $this->pageTitle=Yii::app()->name . ' - Cek Stok'; 
