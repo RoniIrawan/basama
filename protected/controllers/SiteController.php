@@ -136,15 +136,30 @@ class SiteController extends Controller
 		$this->render('CekStok');
 	}
 
-	public function actionImportStok()
-	{
-		Yii::app()->user->setFlash('success', "Ini adalah percobaan menggunakan Alert");
-		$this->render('ImportStok');		
-	}
+	// public function actionImportStok()
+	// {
+	// 	Yii::app()->user->setFlash('success', "Ini adalah percobaan menggunakan Alert");
+	// 	$this->render('ImportStok');	
+	// }
 
 	public function actionTentangKami()
 	{
 		$this->render('TentangKami');
+	}
+
+	public function actionImportStok() {
+	    $model=new UploadStok;
+	    if(isset($_POST['UploadStok'])){
+	       $model->attributes=$_POST['UploadStok'];
+	       if($model->validate()){
+	           $model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');
+
+	           $model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
+	           Yii::app()->user->setFlash('upload','File '.$model->BerkasJava->getName().' telah di proses.');
+	           $this->refresh();
+	       }
+	    }
+	    $this->render('ImportStok',array('model'=>$model));
 	}
 
 }

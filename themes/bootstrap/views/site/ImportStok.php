@@ -11,6 +11,15 @@ $this->breadcrumbs=array(
 	<h1>Silahkan <em class="text-error">import</em> data stok sesuai toko</h1>
 </div>
 
+
+<?php if(Yii::app()->user->hasFlash('upload')): ?>
+	<script type="text/javascript">$(".alert").alert('close');</script>				 
+	<div class="alert alert-success">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<strong>Informasi! </strong><?php echo Yii::app()->user->getFlash('upload'); ?>
+	</div>
+<?php endif;?>
+
 <div class="tabbable tabs-left">
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#tab1" data-toggle="tab"><strong>JAVA SEVEN</strong></a></li>
@@ -21,9 +30,24 @@ $this->breadcrumbs=array(
 		<div class="tab-pane active" id="tab1">
 			<div class="well well-large">				
 				<img src="<?php echo Yii::app()->request->baseUrl;?>/images/dbjava.png" width="175" height="175" alt="IMPORT STOK JAVA SEVEN" /><br><br>
-				<div class="form-group">
-				    <p><input type="file" id="exampleInputFile"></p>
-				    <p><button class="btn btn-large btn-primary" type="button">Import data stok</button></p>
+				<div class="form-group">		    
+				    
+					<div class="form">
+						<?php $form=$this->beginWidget('CActiveForm', array(
+						 'id'=>'upload-form',
+						 'enableAjaxValidation'=>true,
+						 'clientOptions' => array(
+                            'validateOnSubmit' => true,
+                         ),
+						 'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+						)); ?>
+
+					 	<p><?php echo $form->fileField($model,'BerkasJava'); ?></p>
+						<p><?php echo CHtml::submitButton('Import Stok', array('class' => 'btn btn-large btn-primary')); ?></p>
+					 
+					<?php $this->endWidget(); ?>						 
+					</div>
+
 				</div>
 			</div>
 		</div>
