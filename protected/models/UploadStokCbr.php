@@ -1,12 +1,12 @@
 <?php
-class UploadStok extends CFormModel
+class UploadStokCbr extends CFormModel
 {
-	public $BerkasJava;
+	public $BerkasCbr;
 
 	public function rules()
 	{
 		return array(
-		   array('BerkasJava','file',
+		   array('BerkasCbr','file',
 		    'types'=>'xls', //tipe file gambar
 		    'maxSize'=>100*1024*1024, // max:10MB
 		   ),

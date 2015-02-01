@@ -21,7 +21,11 @@
             'items'=>array(
                 array('label'=>'Beranda', 'url'=>array('/site'), 'visible'=>Yii::app()->user->isGuest, 'icon'=>'icon-home'),
                 array('label'=>'Cek Stok', 'url'=>array('/site/CekStok/'), 'icon'=>'icon-eye-open'),
-                array('label'=>'Import Stok', 'url'=>array('/site/ImportStok'), 'visible'=>!Yii::app()->user->isGuest, 'icon'=>'icon-arrow-up'),
+                array('label'=>'Import Stok', 'visible'=>!Yii::app()->user->isGuest, 'icon'=>'icon-arrow-up', 'items'=>array(
+                	array('label'=>'JAVA SEVEN', 'url'=>array('/site/ImportStokJava/'), 'visible'=>!Yii::app()->user->isGuest),
+                	array('label'=>'CBR SIX', 'url'=>array('/site/ImportStokCbr/'), 'visible'=>!Yii::app()->user->isGuest),
+                	array('label'=>'BSM SOGA', 'url'=>array('/site/ImportStokSoga/'), 'visible'=>!Yii::app()->user->isGuest),
+                	)),
                 array('label'=>'Tentang Kami', 'url'=>array('/site/TentangKami/'), 'visible'=>Yii::app()->user->isGuest,'icon'=>'icon-info-sign'),
                 // array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label'=>'Masuk', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest, 'icon'=>'icon-user'),

@@ -147,19 +147,49 @@ class SiteController extends Controller
 		$this->render('TentangKami');
 	}
 
-	public function actionImportStok() {
-	    $model=new UploadStok;
-	    if(isset($_POST['UploadStok'])){
-	       $model->attributes=$_POST['UploadStok'];
+	public function actionImportStokJava() {
+	    $model=new UploadStokJava;
+	    if(isset($_POST['UploadStokJava'])){
+	       $model->attributes=$_POST['UploadStokJava'];
 	       if($model->validate()){
 	           $model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');
-
+	           
 	           $model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
-	           Yii::app()->user->setFlash('upload','File '.$model->BerkasJava->getName().' telah di proses.');
+	           Yii::app()->user->setFlash('uploadJava','File '.$model->BerkasJava->getName().' telah di proses.');
 	           $this->refresh();
 	       }
 	    }
-	    $this->render('ImportStok',array('model'=>$model));
+	    $this->render('ImportStok/ImportStokJava',array('model'=>$model));
+	}
+
+	public function actionImportStokCbr() {
+	    $model=new UploadStokCbr;
+	    if(isset($_POST['UploadStokCbr'])){
+	       $model->attributes=$_POST['UploadStokCbr'];
+	       if($model->validate()){
+	           $model->BerkasCbr = CUploadedFile::getInstance($model, 'BerkasCbr');
+	           
+	           $model->BerkasCbr->saveAs(Yii::app()->basePath . '/../upload/cbrsix/'.$model->BerkasCbr->getName());
+	           Yii::app()->user->setFlash('uploadCbr','File '.$model->BerkasCbr->getName().' telah di proses.');
+	           $this->refresh();
+	       }
+	    }
+	    $this->render('ImportStok/ImportStokCbr',array('model'=>$model));
+	}
+
+	public function actionImportStokSoga() {
+	    $model=new UploadStokSoga;
+	    if(isset($_POST['UploadStokSoga'])){
+	       $model->attributes=$_POST['UploadStokSoga'];
+	       if($model->validate()){
+	           $model->BerkasSoga = CUploadedFile::getInstance($model, 'BerkasSoga');
+	           
+	           $model->BerkasSoga->saveAs(Yii::app()->basePath . '/../upload/bsmsoga/'.$model->BerkasSoga->getName());
+	           Yii::app()->user->setFlash('uploadSoga','File '.$model->BerkasSoga->getName().' telah di proses.');
+	           $this->refresh();
+	       }
+	    }
+	    $this->render('ImportStok/ImportStokSoga',array('model'=>$model));
 	}
 
 }
