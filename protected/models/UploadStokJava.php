@@ -2,6 +2,8 @@
 class UploadStokJava extends CFormModel
 {
 	public $BerkasJava;
+	public $kode;
+	public $total;
 
 	public function rules()
 	{
@@ -12,5 +14,12 @@ class UploadStokJava extends CFormModel
 		    'allowEmpty'=>false,
 		   ),
 		);
-	 }
+	}
+
+	public function attributeLabels() 
+	{
+		return array(
+			'BerkasJava'=>'File CSV',
+		);
+	}
 }

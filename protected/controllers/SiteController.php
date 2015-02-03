@@ -116,7 +116,7 @@ class SiteController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
 				// $this->redirect(Yii::app()->user->returnUrl);				
-				$this->redirect(array('/site/ImportStokJava'));
+				$this->redirect(array('/site/CekStok'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -155,11 +155,53 @@ class SiteController extends Controller
 	        	$model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');	           
 	        	$model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
 	           
-	        	$csvFile=CUploadedFile::getInstance($model, 'BerkasJava');
-				$tempLoc=$csvFile->getTempName();
+	        	$csvFile=Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName();
+				if (($fp = fopen($csvFile, "r")) !== false) {
+					while (($line = fgetcsv($fp, 1000, ",")) !== false) {						
+						$stok_java = new Stokjavaseven;
+						
+						$stok_java->kode = $line[0];
+						$stok_java->warna = $line[1];
+						$stok_java->allsize = $line[2];
+						$stok_java->s = $line[3];
+						$stok_java->m = $line[4];
+						$stok_java->l = $line[5];
+						$stok_java->xl = $line[6];
+						$stok_java->xxl = $line[7];
+						$stok_java->no_2 = $line[8];
+						$stok_java->no_4 = $line[9];
+						$stok_java->no_6 = $line[10];
+						$stok_java->no_8 = $line[11];
+						$stok_java->no_10 = $line[12];
+						$stok_java->no_12 = $line[13];
+						$stok_java->no_22 = $line[14];
+						$stok_java->no_23 = $line[15];
+						$stok_java->no_24 = $line[16];
+						$stok_java->no_25 = $line[17];
+						$stok_java->no_26 = $line[18];
+						$stok_java->no_27 = $line[19];
+						$stok_java->no_28 = $line[20];
+						$stok_java->no_29 = $line[21];
+						$stok_java->no_30 = $line[22];
+						$stok_java->no_31 = $line[23];
+						$stok_java->no_32 = $line[24];
+						$stok_java->no_33 = $line[25];
+						$stok_java->no_34 = $line[26];
+						$stok_java->no_35 = $line[27];
+						$stok_java->no_36 = $line[28];
+						$stok_java->no_37 = $line[29];
+						$stok_java->no_38 = $line[30];
+						$stok_java->no_39 = $line[31];
+						$stok_java->no_40 = $line[32];
+						$stok_java->no_41 = $line[33];
+						$stok_java->no_42 = $line[34];
+						$stok_java->no_43 = $line[35];						
 
-				
-				
+						$stok_java->save();
+					}
+					fclose($fp);					
+				}
+	        	
 	        	Yii::app()->user->setFlash('uploadJava','File '.$model->BerkasJava->getName().' telah di proses.');
 	        	$this->refresh();
 	       }
