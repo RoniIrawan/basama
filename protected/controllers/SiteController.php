@@ -116,7 +116,7 @@ class SiteController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
 				// $this->redirect(Yii::app()->user->returnUrl);				
-				$this->redirect(array('/site/ImportStok'));
+				$this->redirect(array('/site/ImportStokJava'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -152,11 +152,16 @@ class SiteController extends Controller
 	    if(isset($_POST['UploadStokJava'])){
 	       $model->attributes=$_POST['UploadStokJava'];
 	       if($model->validate()){
-	           $model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');
+	        	$model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');	           
+	        	$model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
 	           
-	           $model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
-	           Yii::app()->user->setFlash('uploadJava','File '.$model->BerkasJava->getName().' telah di proses.');
-	           $this->refresh();
+	        	$csvFile=CUploadedFile::getInstance($model, 'BerkasJava');
+				$tempLoc=$csvFile->getTempName();
+
+				
+				
+	        	Yii::app()->user->setFlash('uploadJava','File '.$model->BerkasJava->getName().' telah di proses.');
+	        	$this->refresh();
 	       }
 	    }
 	    $this->render('ImportStok/ImportStokJava',array('model'=>$model));

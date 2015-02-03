@@ -7,8 +7,9 @@ class UploadStokJava extends CFormModel
 	{
 		return array(
 		   array('BerkasJava','file',
-		    'types'=>'xls', //tipe file gambar
+		    'types'=>'csv', //tipe file gambar
 		    'maxSize'=>100*1024*1024, // max:10MB
+		    'allowEmpty'=>false,
 		   ),
 		);
 	 }
