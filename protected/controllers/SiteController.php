@@ -214,9 +214,56 @@ class SiteController extends Controller
 	    if(isset($_POST['UploadStokCbr'])){
 	       $model->attributes=$_POST['UploadStokCbr'];
 	       if($model->validate()){
-	           $model->BerkasCbr = CUploadedFile::getInstance($model, 'BerkasCbr');
-	           
+	           $model->BerkasCbr = CUploadedFile::getInstance($model, 'BerkasCbr');	           
 	           $model->BerkasCbr->saveAs(Yii::app()->basePath . '/../upload/cbrsix/'.$model->BerkasCbr->getName());
+	           
+	           $csvFile=Yii::app()->basePath . '/../upload/cbrsix/'.$model->BerkasCbr->getName();
+				if (($fp = fopen($csvFile, "r")) !== false) {
+					while (($line_cbr = fgetcsv($fp, 1000, ",")) !== false) {						
+						$stok_cbr = new Stokcbrsix;
+						
+						$stok_cbr->kode = $line_cbr[0];
+						$stok_cbr->warna = $line_cbr[1];
+						$stok_cbr->allsize = $line_cbr[2];
+						$stok_cbr->s = $line_cbr[3];
+						$stok_cbr->m = $line_cbr[4];
+						$stok_cbr->l = $line_cbr[5];
+						$stok_cbr->xl = $line_cbr[6];
+						$stok_cbr->xxl = $line_cbr[7];
+						$stok_cbr->no_2 = $line_cbr[8];
+						$stok_cbr->no_4 = $line_cbr[9];
+						$stok_cbr->no_6 = $line_cbr[10];
+						$stok_cbr->no_8 = $line_cbr[11];
+						$stok_cbr->no_10 = $line_cbr[12];
+						$stok_cbr->no_12 = $line_cbr[13];
+						$stok_cbr->no_22 = $line_cbr[14];
+						$stok_cbr->no_23 = $line_cbr[15];
+						$stok_cbr->no_24 = $line_cbr[16];
+						$stok_cbr->no_25 = $line_cbr[17];
+						$stok_cbr->no_26 = $line_cbr[18];
+						$stok_cbr->no_27 = $line_cbr[19];
+						$stok_cbr->no_28 = $line_cbr[20];
+						$stok_cbr->no_29 = $line_cbr[21];
+						$stok_cbr->no_30 = $line_cbr[22];
+						$stok_cbr->no_31 = $line_cbr[23];
+						$stok_cbr->no_32 = $line_cbr[24];
+						$stok_cbr->no_33 = $line_cbr[25];
+						$stok_cbr->no_34 = $line_cbr[26];
+						$stok_cbr->no_35 = $line_cbr[27];
+						$stok_cbr->no_36 = $line_cbr[28];
+						$stok_cbr->no_37 = $line_cbr[29];
+						$stok_cbr->no_38 = $line_cbr[30];
+						$stok_cbr->no_39 = $line_cbr[31];
+						$stok_cbr->no_40 = $line_cbr[32];
+						$stok_cbr->no_41 = $line_cbr[33];
+						$stok_cbr->no_42 = $line_cbr[34];
+						// $stok_cbr->no_43 = $line_cbr[35];						
+
+						$stok_cbr->save();
+					}
+					fclose($fp);					
+				}
+
 	           Yii::app()->user->setFlash('uploadCbr','File '.$model->BerkasCbr->getName().' telah di proses.');
 	           $this->refresh();
 	       }

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 03, 2015 at 12:17 
+-- Generation Time: Feb 04, 2015 at 09:39 
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -23,21 +23,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stok`
+-- Table structure for table `stokcbrsix`
 --
 
-CREATE TABLE IF NOT EXISTS `stok` (
-  `KODE` char(7) NOT NULL,
-  `TOTAL` int(25) NOT NULL
+CREATE TABLE IF NOT EXISTS `stokcbrsix` (
+  `kode` char(7) NOT NULL,
+  `warna` varchar(11) DEFAULT NULL,
+  `allsize` int(11) DEFAULT NULL,
+  `s` int(11) DEFAULT NULL,
+  `m` int(11) DEFAULT NULL,
+  `l` int(11) DEFAULT NULL,
+  `xl` int(11) DEFAULT NULL,
+  `xxl` int(11) DEFAULT NULL,
+  `no_2` int(11) DEFAULT NULL,
+  `no_4` int(11) DEFAULT NULL,
+  `no_6` int(11) DEFAULT NULL,
+  `no_8` int(11) DEFAULT NULL,
+  `no_10` int(11) DEFAULT NULL,
+  `no_21` int(11) DEFAULT NULL,
+  `no_22` int(11) DEFAULT NULL,
+  `no_23` int(11) DEFAULT NULL,
+  `no_24` int(11) DEFAULT NULL,
+  `no_25` int(11) DEFAULT NULL,
+  `no_26` int(11) DEFAULT NULL,
+  `no_27` int(11) DEFAULT NULL,
+  `no_28` int(11) DEFAULT NULL,
+  `no_29` int(11) DEFAULT NULL,
+  `no_30` int(11) DEFAULT NULL,
+  `no_31` int(11) DEFAULT NULL,
+  `no_32` int(11) DEFAULT NULL,
+  `no_33` int(11) DEFAULT NULL,
+  `no_34` int(11) DEFAULT NULL,
+  `no_35` int(11) DEFAULT NULL,
+  `no_36` int(11) DEFAULT NULL,
+  `no_37` int(11) DEFAULT NULL,
+  `no_38` int(11) DEFAULT NULL,
+  `no_39` int(11) DEFAULT NULL,
+  `no_40` int(11) DEFAULT NULL,
+  `no_41` int(11) DEFAULT NULL,
+  `no_42` int(11) DEFAULT NULL,
+  `no_43` int(11) DEFAULT NULL,
+  `no_44` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `stok`
---
-
-INSERT INTO `stok` (`KODE`, `TOTAL`) VALUES
-('AGL 006', 0),
-('ISL 900', 0);
 
 -- --------------------------------------------------------
 
@@ -866,10 +893,10 @@ INSERT INTO `users` (`id`, `username`, `password`, `level`) VALUES
 --
 
 --
--- Indexes for table `stok`
+-- Indexes for table `stokcbrsix`
 --
-ALTER TABLE `stok`
- ADD PRIMARY KEY (`KODE`);
+ALTER TABLE `stokcbrsix`
+ ADD PRIMARY KEY (`kode`);
 
 --
 -- Indexes for table `stokjavaseven`
