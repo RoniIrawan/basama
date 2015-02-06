@@ -185,7 +185,7 @@ class Stokcbrsix extends CActiveRecord
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
-	 * Typical usecase:
+	 * Typical usecase: 
 	 * - Initialize the model fields with values from filter form.
 	 * - Execute this method to get CActiveDataProvider instance which will filter
 	 * models according to data in model fields.
