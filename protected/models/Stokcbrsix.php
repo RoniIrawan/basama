@@ -18,6 +18,11 @@
  * @property integer $no_8
  * @property integer $no_10
  * @property integer $no_12
+ * @property integer $no_14
+ * @property integer $no_16
+ * @property integer $no_18
+ * @property integer $no_20
+ * @property integer $no_21
  * @property integer $no_22
  * @property integer $no_23
  * @property integer $no_24
@@ -40,6 +45,8 @@
  * @property integer $no_41
  * @property integer $no_42
  * @property integer $no_43
+ * @property integer $no_44
+ * @property integer $no_45
  */
 class Stokcbrsix extends CActiveRecord
 {
@@ -57,6 +64,11 @@ class Stokcbrsix extends CActiveRecord
 	public $no_8;
 	public $no_10;
 	public $no_12;
+	public $no_14;
+	public $no_16;
+	public $no_18;
+	public $no_20;
+	public $no_21;
 	public $no_22;
 	public $no_23;
 	public $no_24;
@@ -79,7 +91,8 @@ class Stokcbrsix extends CActiveRecord
 	public $no_41;
 	public $no_42;
 	public $no_43;
-	
+	public $no_44;
+	public $no_45;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -97,12 +110,12 @@ class Stokcbrsix extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('kode', 'required'),
-			array('allsize, s, m, l, xl, xxl, no_2, no_4, no_6, no_8, no_10, no_12, no_22, no_23, no_24, no_25, no_26, no_27, no_28, no_29, no_30, no_31, no_32, no_33, no_34, no_35, no_36, no_37, no_38, no_39, no_40, no_41, no_42, no_43', 'numerical', 'integerOnly'=>true),
+			array('allsize, s, m, l, xl, xxl, no_2, no_4, no_6, no_8, no_10, no_12, no_14, no_16, no_18, no_20, no_21, no_22, no_23, no_24, no_25, no_26, no_27, no_28, no_29, no_30, no_31, no_32, no_33, no_34, no_35, no_36, no_37, no_38, no_39, no_40, no_41, no_42, no_43, no_44, no_45', 'numerical', 'integerOnly'=>true),
 			array('kode', 'length', 'max'=>7),
 			array('warna', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('kode, warna, allsize, s, m, l, xl, xxl, no_2, no_4, no_6, no_8, no_10, no_12, no_22, no_23, no_24, no_25, no_26, no_27, no_28, no_29, no_30, no_31, no_32, no_33, no_34, no_35, no_36, no_37, no_38, no_39, no_40, no_41, no_42, no_43', 'safe', 'on'=>'search'),
+			array('kode, warna, allsize, s, m, l, xl, xxl, no_2, no_4, no_6, no_8, no_10, no_12, no_14, no_16, no_18, no_20, no_21, no_22, no_23, no_24, no_25, no_26, no_27, no_28, no_29, no_30, no_31, no_32, no_33, no_34, no_35, no_36, no_37, no_38, no_39, no_40, no_41, no_42, no_43, no_44, no_45', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -137,6 +150,11 @@ class Stokcbrsix extends CActiveRecord
 			'no_8' => 'No 8',
 			'no_10' => 'No 10',
 			'no_12' => 'No 12',
+			'no_14' => 'No 14',
+			'no_16' => 'No 16',
+			'no_18' => 'No 18',
+			'no_20' => 'No 20',
+			'no_21' => 'No 21',
 			'no_22' => 'No 22',
 			'no_23' => 'No 23',
 			'no_24' => 'No 24',
@@ -159,6 +177,8 @@ class Stokcbrsix extends CActiveRecord
 			'no_41' => 'No 41',
 			'no_42' => 'No 42',
 			'no_43' => 'No 43',
+			'no_44' => 'No 44',
+			'no_45' => 'No 45',
 		);
 	}
 
@@ -194,6 +214,11 @@ class Stokcbrsix extends CActiveRecord
 		$criteria->compare('no_8',$this->no_8);
 		$criteria->compare('no_10',$this->no_10);
 		$criteria->compare('no_12',$this->no_12);
+		$criteria->compare('no_14',$this->no_14);
+		$criteria->compare('no_16',$this->no_16);
+		$criteria->compare('no_18',$this->no_18);
+		$criteria->compare('no_20',$this->no_20);
+		$criteria->compare('no_21',$this->no_21);
 		$criteria->compare('no_22',$this->no_22);
 		$criteria->compare('no_23',$this->no_23);
 		$criteria->compare('no_24',$this->no_24);
@@ -216,6 +241,8 @@ class Stokcbrsix extends CActiveRecord
 		$criteria->compare('no_41',$this->no_41);
 		$criteria->compare('no_42',$this->no_42);
 		$criteria->compare('no_43',$this->no_43);
+		$criteria->compare('no_44',$this->no_44);
+		$criteria->compare('no_45',$this->no_45);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
