@@ -174,28 +174,35 @@ class SiteController extends Controller
 						$stok_java->no_8 = $line[11];
 						$stok_java->no_10 = $line[12];
 						$stok_java->no_12 = $line[13];
-						$stok_java->no_22 = $line[14];
-						$stok_java->no_23 = $line[15];
-						$stok_java->no_24 = $line[16];
-						$stok_java->no_25 = $line[17];
-						$stok_java->no_26 = $line[18];
-						$stok_java->no_27 = $line[19];
-						$stok_java->no_28 = $line[20];
-						$stok_java->no_29 = $line[21];
-						$stok_java->no_30 = $line[22];
-						$stok_java->no_31 = $line[23];
-						$stok_java->no_32 = $line[24];
-						$stok_java->no_33 = $line[25];
-						$stok_java->no_34 = $line[26];
-						$stok_java->no_35 = $line[27];
-						$stok_java->no_36 = $line[28];
-						$stok_java->no_37 = $line[29];
-						$stok_java->no_38 = $line[30];
-						$stok_java->no_39 = $line[31];
-						$stok_java->no_40 = $line[32];
-						$stok_java->no_41 = $line[33];
-						$stok_java->no_42 = $line[34];
-						$stok_java->no_43 = $line[35];						
+						$stok_java->no_14 = $line[14];
+						$stok_java->no_16 = $line[15];
+						$stok_java->no_18 = $line[16];
+						$stok_java->no_20 = $line[17];
+						$stok_java->no_21 = $line[18];
+						$stok_java->no_22 = $line[19];
+						$stok_java->no_23 = $line[20];
+						$stok_java->no_24 = $line[21];
+						$stok_java->no_25 = $line[22];
+						$stok_java->no_26 = $line[23];
+						$stok_java->no_27 = $line[24];
+						$stok_java->no_28 = $line[25];
+						$stok_java->no_29 = $line[26];
+						$stok_java->no_30 = $line[27];
+						$stok_java->no_31 = $line[28];
+						$stok_java->no_32 = $line[29];
+						$stok_java->no_33 = $line[30];
+						$stok_java->no_34 = $line[31];
+						$stok_java->no_35 = $line[32];
+						$stok_java->no_36 = $line[33];
+						$stok_java->no_37 = $line[34];
+						$stok_java->no_38 = $line[35];
+						$stok_java->no_39 = $line[36];
+						$stok_java->no_40 = $line[37];
+						$stok_java->no_41 = $line[38];
+						$stok_java->no_42 = $line[39];
+						$stok_java->no_43 = $line[40];
+						$stok_java->no_44 = $line[41];
+						$stok_java->no_45 = $line[42];						
 
 						$stok_java->save();
 					}
@@ -283,9 +290,63 @@ class SiteController extends Controller
 	    if(isset($_POST['UploadStokSoga'])){
 	       $model->attributes=$_POST['UploadStokSoga'];
 	       if($model->validate()){
-	           $model->BerkasSoga = CUploadedFile::getInstance($model, 'BerkasSoga');
-	           
+	           $model->BerkasSoga = CUploadedFile::getInstance($model, 'BerkasSoga');	           
 	           $model->BerkasSoga->saveAs(Yii::app()->basePath . '/../upload/bsmsoga/'.$model->BerkasSoga->getName());
+	           
+	           $csvFile=Yii::app()->basePath . '/../upload/bsmsoga/'.$model->BerkasSoga->getName();
+				if (($fp = fopen($csvFile, "r")) !== false) {
+					while (($line_soga = fgetcsv($fp, 1000, ",")) !== false) {						
+						$stok_soga = new Stokbsmsoga;
+						
+						$stok_soga->kode = $line_soga[0];
+						$stok_soga->warna = $line_soga[1];
+						$stok_soga->allsize = $line_soga[2];
+						$stok_soga->s = $line_soga[3];
+						$stok_soga->m = $line_soga[4];
+						$stok_soga->l = $line_soga[5];
+						$stok_soga->xl = $line_soga[6];
+						$stok_soga->xxl = $line_soga[7];
+						$stok_soga->no_2 = $line_soga[8];
+						$stok_soga->no_4 = $line_soga[9];
+						$stok_soga->no_6 = $line_soga[10];
+						$stok_soga->no_8 = $line_soga[11];
+						$stok_soga->no_10 = $line_soga[12];
+						$stok_soga->no_12 = $line_soga[13];
+						$stok_soga->no_14 = $line_soga[14];
+						$stok_soga->no_16 = $line_soga[15];
+						$stok_soga->no_18 = $line_soga[16];
+						$stok_soga->no_20 = $line_soga[17];
+						$stok_soga->no_21 = $line_soga[18];
+						$stok_soga->no_22 = $line_soga[19];
+						$stok_soga->no_23 = $line_soga[20];
+						$stok_soga->no_24 = $line_soga[21];
+						$stok_soga->no_25 = $line_soga[22];
+						$stok_soga->no_26 = $line_soga[23];
+						$stok_soga->no_27 = $line_soga[24];
+						$stok_soga->no_28 = $line_soga[25];
+						$stok_soga->no_29 = $line_soga[26];
+						$stok_soga->no_30 = $line_soga[27];
+						$stok_soga->no_31 = $line_soga[28];
+						$stok_soga->no_32 = $line_soga[29];
+						$stok_soga->no_33 = $line_soga[30];
+						$stok_soga->no_34 = $line_soga[31];
+						$stok_soga->no_35 = $line_soga[32];
+						$stok_soga->no_36 = $line_soga[33];
+						$stok_soga->no_37 = $line_soga[34];
+						$stok_soga->no_38 = $line_soga[35];
+						$stok_soga->no_39 = $line_soga[36];
+						$stok_soga->no_40 = $line_soga[37];
+						$stok_soga->no_41 = $line_soga[38];
+						$stok_soga->no_42 = $line_soga[39];
+						$stok_soga->no_43 = $line_soga[40];						
+						$stok_soga->no_44 = $line_soga[41];
+						$stok_soga->no_45 = $line_soga[42];
+
+						$stok_soga->save();
+					}
+					fclose($fp);					
+				}
+
 	           Yii::app()->user->setFlash('uploadSoga','File '.$model->BerkasSoga->getName().' telah di proses.');
 	           $this->refresh();
 	       }

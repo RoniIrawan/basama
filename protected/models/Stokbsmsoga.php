@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "stokjavaseven".
+ * This is the model class for table "stokbsmsoga".
  *
- * The followings are the available columns in table 'stokjavaseven':
+ * The followings are the available columns in table 'stokbsmsoga':
  * @property string $kode
  * @property string $warna
  * @property integer $allsize
@@ -48,7 +48,7 @@
  * @property integer $no_44
  * @property integer $no_45
  */
-class Stokjavaseven extends CActiveRecord
+class Stokbsmsoga extends CActiveRecord
 {
 	public $kode;
 	public $warna;
@@ -98,7 +98,7 @@ class Stokjavaseven extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'stokjavaseven';
+		return 'stokbsmsoga';
 	}
 
 	/**
@@ -253,7 +253,7 @@ class Stokjavaseven extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Stokjavaseven the static model class
+	 * @return Stokbsmsoga the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
