@@ -2199,6 +2199,7 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/basama/user
 ---
+<<<<<<< HEAD
 2015/01/28 12:52:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'roni'@'localhost' (using password: YES)' in C:\xampp\htdocs\basama\assets\framework\db\CDbConnection.php:399
 Stack trace:
 #0 C:\xampp\htdocs\basama\assets\framework\db\CDbConnection.php(347): CDbConnection->open()
@@ -2263,3 +2264,866 @@ Stack trace:
 REQUEST_URI=/basama/site/login
 HTTP_REFERER=http://localhost/basama/site/login
 ---
+=======
+2015/02/01 02:54:28 [error] [php] Undefined variable: ticket (/opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php:27)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (27)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 03:03:28 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php:38)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (38)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 03:15:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'basama.ImportStokForm' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `ImportStokForm`.
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (144)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 03:15:04 [error] [exception.CDbException] exception 'CDbException' with message 'The table "ImportStokForm" for active record class "ImportStokForm" cannot be found in the database.' in /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php:2385
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(ImportStokForm))
+#1 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(144): CActiveRecord->__construct()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstok')
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/basama/site/ImportStok
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:16:48 [error] [php] include(ImportStokForm.php): failed to open stream: No such file or directory (/opt/lampp/htdocs/basama/assets/framework/YiiBase.php:432)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(144): spl_autoload_call()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (144)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 03:17:15 [error] [php] include(ImportStokForm.php): failed to open stream: No such file or directory (/opt/lampp/htdocs/basama/assets/framework/YiiBase.php:432)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(144): spl_autoload_call()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (144)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 03:29:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=Jalan+Ciwidey.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:29:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=Jalan+Ciwidey.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:30:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=Jalan+Ciwidey.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:31:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=Jalan+Ciwidey.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:32:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=deserto_volto_2.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=deserto_volto_2.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:34:22 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "sizeLimit" cannot be empty.' in /opt/lampp/htdocs/basama/protected/extensions/EAjaxUpload/EAjaxUpload.php:72
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(181): EAjaxUpload->run()
+#1 /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php(45): CBaseController->widget('ext.EAjaxUpload...', Array)
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(126): require('/opt/lampp/htdo...')
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(95): CBaseController->renderInternal('/opt/lampp/htdo...', NULL, true)
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): CBaseController->renderFile('/opt/lampp/htdo...', NULL, true)
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): CController->renderPartial('ImportStok', NULL, true)
+#6 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): CController->render('ImportStok')
+#7 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#15 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstok')
+#17 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
+#18 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#19 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/basama/site/ImportStok
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:34:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=Jalan+Ciwidey.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "SiteController/upload".' in /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('SiteController/...')
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/basama/SiteController/upload?PHPSESSID=d0rtaj2slbm2eddbcgcbap12l2&YII_CSRF_TOKEN=91282ffd7d5477f9a917ae8a5fb0a688c8c75d6c&qqfile=deserto_volto_2.jpg
+HTTP_REFERER=http://localhost/basama/site/ImportStok
+---
+2015/02/01 03:42:17 [error] [php] Undefined variable: postParams (/opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php:117)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(126): require()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#4 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php (117)
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (48)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+2015/02/01 03:43:02 [error] [php] Undefined variable: postParams (/opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php:117)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(126): require()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#4 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php (117)
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (48)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+2015/02/01 03:43:04 [error] [php] Undefined variable: postParams (/opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php:117)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(126): require()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#4 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php (117)
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (48)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+2015/02/01 03:43:06 [error] [php] Undefined variable: postParams (/opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php:117)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(126): require()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#4 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php (117)
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (48)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+2015/02/01 03:43:07 [error] [php] Undefined variable: postParams (/opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php:117)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(126): require()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#4 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#17 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/extensions/EFineUploader/EFineUploader.php (117)
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (48)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+2015/02/01 04:10:45 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php:43)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(142): SiteController->render()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (43)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (142)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 04:18:52 [error] [php] move_uploaded_file(/opt/lampp/htdocs/basama/protected/../upload/javaseven/Jalan Ciwidey.jpg): failed to open stream: Permission denied (/opt/lampp/htdocs/basama/assets/framework/web/CUploadedFile.php:198)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (156)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 05:54:13 [error] [php] Undefined variable: form (/opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php:23)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(869): SiteController->renderFile()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(161): SiteController->render()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStok()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/themes/bootstrap/views/site/ImportStok.php (23)
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (161)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 06:16:37 [error] [php] chmod(): No such file or directory (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:156)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStok
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (156)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 06:25:03 [warning] [application] Failed to set unsafe attribute "BerkasJava" of "UploadStok".
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (153)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 06:25:54 [warning] [application] Failed to set unsafe attribute "BerkasJava" of "UploadStok".
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (153)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 06:55:41 [warning] [application] Failed to set unsafe attribute "BerkasJava" of "UploadStokCbr".
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (165)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 07:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "importstok".' in /opt/lampp/htdocs/basama/assets/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(270): CController->missingAction('importstok')
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstok')
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
+#3 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/basama/site/ImportStok
+HTTP_REFERER=http://localhost/basama/
+---
+2015/02/01 07:21:26 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "ImportStokJava".' in /opt/lampp/htdocs/basama/assets/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): CController->renderPartial('ImportStokJava', Array, true)
+#1 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(162): CController->render('ImportStokJava', Array)
+#2 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokjava')
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#13 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/
+---
+2015/02/01 07:22:40 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "ImportStokJava".' in /opt/lampp/htdocs/basama/assets/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): CController->renderPartial('ImportStokJava', Array, true)
+#1 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(162): CController->render('ImportStokJava', Array)
+#2 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokjava')
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#13 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/
+---
+2015/02/01 07:22:46 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "ImportStokJava".' in /opt/lampp/htdocs/basama/assets/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): CController->renderPartial('ImportStokJava', Array, true)
+#1 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(162): CController->render('ImportStokJava', Array)
+#2 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokjava')
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#13 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/
+---
+2015/02/01 07:29:54 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "/ImportStok/ImportStokJava".' in /opt/lampp/htdocs/basama/assets/framework/web/CController.php:878
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(782): CController->renderPartial('/ImportStok/Imp...', Array, true)
+#1 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(162): CController->render('/ImportStok/Imp...', Array)
+#2 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokjava')
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#13 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#14 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/
+---
+2015/02/01 08:01:55 [error] [exception.CException] exception 'CException' with message 'Property "UploadStokCbr.BerkasJava" is not defined.' in /opt/lampp/htdocs/basama/assets/framework/base/CComponent.php:130
+Stack trace:
+#0 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(173): CComponent->__get('BerkasJava')
+#1 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokCbr()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokcbr')
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#12 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/basama/site/ImportStokCbr
+HTTP_REFERER=http://localhost/basama/site/ImportStokCbr
+---
+2015/02/01 08:52:04 [error] [php] Creating default object from empty value (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:152)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (152)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 08:52:41 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (185)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 08:52:44 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (185)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 08:53:47 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (185)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 08:54:59 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (185)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 08:55:20 [error] [php] Undefined variable: model (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:185)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (185)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 08:59:08 [error] [php] PDOStatement::execute(): LOAD DATA LOCAL INFILE forbidden (/opt/lampp/htdocs/basama/assets/framework/db/CDbCommand.php:335)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (172)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 09:22:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 13 Can't get stat of '/opt/lampp/temp/phpsOFem1' (Errcode: 2 - No such file or directory). The SQL statement executed was: LOAD DATA INFILE '/opt/lampp/temp/phpsOFem1'
+				INTO TABLE `stok`
+				FIELDS TERMINATED BY ','
+				ENCLOSED BY '"' LINES TERMINATED BY '
+'
+				IGNORE 1 LINES
+				(`KODE`, `TOTAL`).
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (172)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 09:22:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 7890 Can't find file '/opt/lampp/temp/phptulJRF'.. The SQL statement executed was: LOAD DATA LOCAL INFILE '/opt/lampp/temp/phptulJRF'
+				INTO TABLE `stok`
+				FIELDS TERMINATED BY ','
+				ENCLOSED BY '"' LINES TERMINATED BY '
+'
+				IGNORE 1 LINES
+				(`KODE`, `TOTAL`).
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (172)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 09:22:44 [error] [php] PDOStatement::execute(): LOAD DATA LOCAL INFILE forbidden (/opt/lampp/htdocs/basama/assets/framework/db/CDbCommand.php:335)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (172)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/01 09:35:02 [error] [php] fopen(/opt/lampp/temp/phpaTF1C2): failed to open stream: No such file or directory (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:161)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (161)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/02 11:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "importstok".' in /opt/lampp/htdocs/basama/assets/framework/web/CController.php:483
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(270): CController->missingAction('importstok')
+#1 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstok')
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
+#3 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/basama/site/ImportStok
+HTTP_REFERER=http://localhost/basama/site/login
+---
+2015/02/03 10:08:15 [error] [php] fopen(STOK ALL.csv): failed to open stream: No such file or directory (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:159)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (159)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/03 10:30:44 [error] [php] fopen(/opt/lampp/temp/php9RQyZj): failed to open stream: No such file or directory (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:159)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokJava
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (159)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/03 11:17:09 [error] [exception.CException] exception 'CException' with message 'Stokjavaseven has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in /opt/lampp/htdocs/basama/assets/framework/base/CModel.php:289
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/base/CModel.php(260): CModel->createValidators()
+#1 /opt/lampp/htdocs/basama/assets/framework/base/CModel.php(158): CModel->getValidators()
+#2 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(808): CModel->validate(NULL)
+#3 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(163): CActiveRecord->save()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokjava')
+#14 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#15 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#16 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/site/ImportStokJava
+---
+2015/02/04 03:41:46 [error] [php] Undefined offset: 1 (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:226)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokCbr
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (226)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/04 03:48:23 [error] [php] Undefined offset: 35 (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:260)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokCbr
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (260)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/04 03:52:06 [error] [php] Undefined offset: 35 (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:260)
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#1 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#6 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#10 /opt/lampp/htdocs/basama/index.php(13): CWebApplication->run()
+REQUEST_URI=/basama/site/ImportStokCbr
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (260)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/06 07:05:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'AAN 211' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `stokjavaseven` (`kode`, `warna`, `allsize`, `s`, `m`, `l`, `xl`, `xxl`, `no_2`, `no_4`, `no_6`, `no_8`, `no_10`, `no_12`, `no_14`, `no_16`, `no_18`, `no_20`, `no_21`, `no_22`, `no_23`, `no_24`, `no_25`, `no_26`, `no_27`, `no_28`, `no_29`, `no_30`, `no_31`, `no_32`, `no_33`, `no_34`, `no_35`, `no_36`, `no_37`, `no_38`, `no_39`, `no_40`, `no_41`, `no_42`, `no_43`, `no_44`, `no_45`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24, :yp25, :yp26, :yp27, :yp28, :yp29, :yp30, :yp31, :yp32, :yp33, :yp34, :yp35, :yp36, :yp37, :yp38, :yp39, :yp40, :yp41, :yp42).
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (207)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/06 07:05:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'AAN 211' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `stokjavaseven` (`kode`, `warna`, `allsize`, `s`, `m`, `l`, `xl`, `xxl`, `no_2`, `no_4`, `no_6`, `no_8`, `no_10`, `no_12`, `no_14`, `no_16`, `no_18`, `no_20`, `no_21`, `no_22`, `no_23`, `no_24`, `no_25`, `no_26`, `no_27`, `no_28`, `no_29`, `no_30`, `no_31`, `no_32`, `no_33`, `no_34`, `no_35`, `no_36`, `no_37`, `no_38`, `no_39`, `no_40`, `no_41`, `no_42`, `no_43`, `no_44`, `no_45`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24, :yp25, :yp26, :yp27, :yp28, :yp29, :yp30, :yp31, :yp32, :yp33, :yp34, :yp35, :yp36, :yp37, :yp38, :yp39, :yp40, :yp41, :yp42)' in /opt/lampp/htdocs/basama/assets/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(207): CActiveRecord->save()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokJava()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstokjava')
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/site/ImportStokJava
+---
+2015/02/06 12:24:57 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'AAN 211' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `stokbsmsoga` (`kode`, `warna`, `allsize`, `s`, `m`, `l`, `xl`, `xxl`, `no_2`, `no_4`, `no_6`, `no_8`, `no_10`, `no_12`, `no_14`, `no_16`, `no_18`, `no_20`, `no_21`, `no_22`, `no_23`, `no_24`, `no_25`, `no_26`, `no_27`, `no_28`, `no_29`, `no_30`, `no_31`, `no_32`, `no_33`, `no_34`, `no_35`, `no_36`, `no_37`, `no_38`, `no_39`, `no_40`, `no_41`, `no_42`, `no_43`, `no_44`, `no_45`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24, :yp25, :yp26, :yp27, :yp28, :yp29, :yp30, :yp31, :yp32, :yp33, :yp34, :yp35, :yp36, :yp37, :yp38, :yp39, :yp40, :yp41, :yp42).
+in /opt/lampp/htdocs/basama/protected/controllers/SiteController.php (345)
+in /opt/lampp/htdocs/basama/index.php (13)
+2015/02/06 12:24:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'AAN 211' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `stokbsmsoga` (`kode`, `warna`, `allsize`, `s`, `m`, `l`, `xl`, `xxl`, `no_2`, `no_4`, `no_6`, `no_8`, `no_10`, `no_12`, `no_14`, `no_16`, `no_18`, `no_20`, `no_21`, `no_22`, `no_23`, `no_24`, `no_25`, `no_26`, `no_27`, `no_28`, `no_29`, `no_30`, `no_31`, `no_32`, `no_33`, `no_34`, `no_35`, `no_36`, `no_37`, `no_38`, `no_39`, `no_40`, `no_41`, `no_42`, `no_43`, `no_44`, `no_45`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18, :yp19, :yp20, :yp21, :yp22, :yp23, :yp24, :yp25, :yp26, :yp27, :yp28, :yp29, :yp30, :yp31, :yp32, :yp33, :yp34, :yp35, :yp36, :yp37, :yp38, :yp39, :yp40, :yp41, :yp42)' in /opt/lampp/htdocs/basama/assets/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /opt/lampp/htdocs/basama/assets/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /opt/lampp/htdocs/basama/protected/controllers/SiteController.php(345): CActiveRecord->save()
+#3 /opt/lampp/htdocs/basama/assets/framework/web/actions/CInlineAction.php(49): SiteController->actionImportStokSoga()
+#4 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /opt/lampp/htdocs/basama/assets/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(291): CFilterChain->run()
+#11 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(282): CController->run('importstoksoga')
+#13 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#14 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/basama/site/ImportStokSoga
+HTTP_REFERER=http://localhost/basama/site/ImportStokSoga
+---
+>>>>>>> de1393034835d4735a5b23994577e8fe52aa19fe
