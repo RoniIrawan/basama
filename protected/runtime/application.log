@@ -2727,3 +2727,14 @@ Stack trace:
 REQUEST_URI=/basama/site/ImportStokCbr
 HTTP_REFERER=http://localhost/basama/site/ImportStokCbr
 ---
+2015/02/03 08:05:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "importstok".' in C:\xampp\htdocs\basama\assets\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\basama\assets\framework\web\CController.php(270): CController->missingAction('importstok')
+#1 C:\xampp\htdocs\basama\assets\framework\web\CWebApplication.php(282): CController->run('importstok')
+#2 C:\xampp\htdocs\basama\assets\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
+#3 C:\xampp\htdocs\basama\assets\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\basama\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/basama/site/ImportStok
+HTTP_REFERER=http://localhost/basama/site/login
+---
