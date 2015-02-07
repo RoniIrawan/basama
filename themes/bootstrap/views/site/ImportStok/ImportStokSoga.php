@@ -35,10 +35,12 @@ $this->breadcrumbs=array(
 			)); ?>
 
 		 	<p><?php echo $form->fileField($model,'BerkasSoga'); ?></p>
-			<p><?php echo CHtml::submitButton('Import Stok', array('class' => 'btn btn-large btn-primary')); ?></p>
-		 
+			<p><?php echo CHtml::submitButton('Import Stok', array('class' => 'btn btn-large btn-primary',
+				'onSubmit'=>'js:function(){$("#ajaxs").addClass("loading");}')); ?></p>					 
 		<?php $this->endWidget(); ?>						 
 		</div>
 
 	</div>
 </div>
+
+<div id="ajaxs" class="div loading div-loading"></div>

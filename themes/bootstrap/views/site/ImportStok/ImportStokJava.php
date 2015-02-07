@@ -39,6 +39,5 @@ $this->breadcrumbs=array(
 		 
 		<?php $this->endWidget(); ?>						 
 		</div>
-
 	</div>
 </div>

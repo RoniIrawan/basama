@@ -9,6 +9,5 @@ return array(
 	'emulatePrepare' => true,
 	'username' => 'roni',
 	'password' => '771991',
-	'charset' => 'utf8',
-	
+	'charset' => 'utf8',	
 );
