@@ -2793,6 +2793,15 @@ Stack trace:
 REQUEST_URI=/basama/site/ImportStokCbr
 HTTP_REFERER=http://localhost/basama/site/ImportStokCbr
 ---
+<<<<<<< HEAD
+2015/02/03 08:05:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "importstok".' in C:\xampp\htdocs\basama\assets\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\basama\assets\framework\web\CController.php(270): CController->missingAction('importstok')
+#1 C:\xampp\htdocs\basama\assets\framework\web\CWebApplication.php(282): CController->run('importstok')
+#2 C:\xampp\htdocs\basama\assets\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
+#3 C:\xampp\htdocs\basama\assets\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\basama\index.php(13): CApplication->run()
+=======
 2015/02/01 08:52:04 [error] [php] Creating default object from empty value (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:152)
 Stack trace:
 #0 /opt/lampp/htdocs/basama/assets/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
@@ -2967,10 +2976,13 @@ Stack trace:
 #2 /opt/lampp/htdocs/basama/assets/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ImportStok')
 #3 /opt/lampp/htdocs/basama/assets/framework/base/CApplication.php(184): CWebApplication->processRequest()
 #4 /opt/lampp/htdocs/basama/index.php(13): CApplication->run()
+>>>>>>> 582b4c72d24ad7d7c6e62416c04954dfc30903da
 #5 {main}
 REQUEST_URI=/basama/site/ImportStok
 HTTP_REFERER=http://localhost/basama/site/login
 ---
+<<<<<<< HEAD
+=======
 2015/02/03 10:08:15 [error] [php] fopen(STOK ALL.csv): failed to open stream: No such file or directory (/opt/lampp/htdocs/basama/protected/controllers/SiteController.php:159)
 Stack trace:
 #0 /opt/lampp/htdocs/basama/assets/framework/web/CController.php(308): CInlineAction->runWithParams()
@@ -3127,3 +3139,4 @@ REQUEST_URI=/basama/site/ImportStokSoga
 HTTP_REFERER=http://localhost/basama/site/ImportStokSoga
 ---
 >>>>>>> de1393034835d4735a5b23994577e8fe52aa19fe
+>>>>>>> 582b4c72d24ad7d7c6e62416c04954dfc30903da
