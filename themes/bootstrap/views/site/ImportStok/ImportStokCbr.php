@@ -37,7 +37,7 @@ $this->breadcrumbs=array(
 		 	<p><?php echo $form->fileField($model,'BerkasCbr'); ?></p>
 			<p><?php echo CHtml::submitButton('Import Stok', array('class' => 'btn btn-large btn-primary')); ?></p>
 		 
-		<?php $this->endWidget(); ?>						 
+			<?php $this->endWidget(); ?>						 
 		</div>
 
 	</div>
