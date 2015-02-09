@@ -154,7 +154,7 @@ class SiteController extends Controller
 	       if($model->validate()){
 	        	$model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');	           
 	        	$model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
-	           
+	           	
 	        	$csvFile=Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName();
 				if (($fp = fopen($csvFile, "r")) !== false) {
 					while (($line = fgetcsv($fp, 1000, ",")) !== false) {						

@@ -3419,3 +3419,24 @@ REQUEST_URI=/basama/site/ImportStokJava
 in C:\xampp\htdocs\basama\themes\bootstrap\views\site\ImportStok\ImportStokJava.php (43)
 in C:\xampp\htdocs\basama\protected\controllers\SiteController.php (216)
 in C:\xampp\htdocs\basama\index.php (13)
+2015/02/09 03:45:58 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "excute".' in C:\xampp\htdocs\basama\assets\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\basama\protected\controllers\SiteController.php(159): CComponent->__call('excute', Array)
+#1 C:\xampp\htdocs\basama\protected\controllers\SiteController.php(159): CDbCommand->excute()
+#2 C:\xampp\htdocs\basama\assets\framework\web\actions\CInlineAction.php(49): SiteController->actionImportStokJava()
+#3 C:\xampp\htdocs\basama\assets\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\basama\assets\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\basama\assets\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\basama\assets\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\basama\assets\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\basama\assets\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\basama\assets\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\basama\assets\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\basama\assets\framework\web\CWebApplication.php(282): CController->run('importstokjava')
+#12 C:\xampp\htdocs\basama\assets\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ImportStok...')
+#13 C:\xampp\htdocs\basama\assets\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\basama\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/basama/site/ImportStokJava
+HTTP_REFERER=http://localhost/basama/site/ImportStokJava
+---
