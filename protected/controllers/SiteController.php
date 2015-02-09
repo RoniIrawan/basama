@@ -155,6 +155,11 @@ class SiteController extends Controller
 	        	$model->BerkasJava = CUploadedFile::getInstance($model, 'BerkasJava');	           
 	        	$model->BerkasJava->saveAs(Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName());
 	           	
+	        	$sql="truncate table stokjavaseven";
+				$connection=Yii::app()->db;
+				$command=$connection->createCommand($sql);
+				$rowCount=$command->execute();				
+
 	        	$csvFile=Yii::app()->basePath . '/../upload/javaseven/'.$model->BerkasJava->getName();
 				if (($fp = fopen($csvFile, "r")) !== false) {
 					while (($line = fgetcsv($fp, 1000, ",")) !== false) {						
@@ -224,6 +229,11 @@ class SiteController extends Controller
 	           $model->BerkasCbr = CUploadedFile::getInstance($model, 'BerkasCbr');	           
 	           $model->BerkasCbr->saveAs(Yii::app()->basePath . '/../upload/cbrsix/'.$model->BerkasCbr->getName());
 	           
+	        	$sql="truncate table stokcbrsix";
+				$connection=Yii::app()->db;
+				$command=$connection->createCommand($sql);
+				$rowCount=$command->execute();
+
 	           $csvFile=Yii::app()->basePath . '/../upload/cbrsix/'.$model->BerkasCbr->getName();
 				if (($fp = fopen($csvFile, "r")) !== false) {
 					while (($line_cbr = fgetcsv($fp, 1000, ",")) !== false) {						
@@ -293,6 +303,11 @@ class SiteController extends Controller
 	           $model->BerkasSoga = CUploadedFile::getInstance($model, 'BerkasSoga');	           
 	           $model->BerkasSoga->saveAs(Yii::app()->basePath . '/../upload/bsmsoga/'.$model->BerkasSoga->getName());
 	           
+	        	$sql="truncate table stokbsmsoga";
+				$connection=Yii::app()->db;
+				$command=$connection->createCommand($sql);
+				$rowCount=$command->execute();
+
 	           $csvFile=Yii::app()->basePath . '/../upload/bsmsoga/'.$model->BerkasSoga->getName();
 				if (($fp = fopen($csvFile, "r")) !== false) {
 					while (($line_soga = fgetcsv($fp, 1000, ",")) !== false) {						
