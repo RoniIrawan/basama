@@ -132,8 +132,20 @@ class SiteController extends Controller
 	}
 
 	public function actionCekstok()
-	{
-		$this->render('CekStok');
+	{	
+		$model=new VStok;
+		
+			// die($_POST['kode']);	
+		
+		
+		$criteria=new CDbCriteria;
+		$criteria->select='warna,allsize';  // hanya memilih kolom 'title'
+		$criteria->condition='kode=:kode';
+		$criteria->params=array(':kode'=>'BTC 131');
+		$model=VStok::model()->find($criteria); // $params tidak diperlukan
+
+		// $model->allsize=$data;
+		$this->render('CekStok',array('model'=>$model));
 	}
 
 	// public function actionImportStok()
