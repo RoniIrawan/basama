@@ -6,11 +6,11 @@ $this->breadcrumbs=array(
 	'Cek Stok',
 );
 ?>
-<?php if(Yii::app()->user->hasFlash('uploadJava')): ?>
+<?php if(Yii::app()->user->hasFlash('cari')): ?>
 	<script type="text/javascript">$(".alert").alert('close');</script>				 
 	<div class="alert alert-success">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		<strong>Informasi! </strong><?php echo Yii::app()->user->getFlash('uploadJava'); ?>
+		<strong>Informasi! </strong><?php echo Yii::app()->user->getFlash('cari'); ?>
 	</div>
 <?php endif;?>
 <br><br><br><br><br><br>
@@ -19,8 +19,12 @@ $this->breadcrumbs=array(
 	<form class="form-search clearfix">
 	    <div class="input-append">
 	    	<?php $form=$this->beginWidget('CActiveForm', array(
-			    'id'=>'vstok-CekStok-form',
-			    'enableAjaxValidation'=>false,
+			    'id'=>'cari-form',
+			 	'enableAjaxValidation'=>true,
+			 	'clientOptions' => array(
+                'validateOnSubmit' => true,
+             	),
+			 'htmlOptions'=>array('enctype'=>'multipart/form-data'),			
 			)); ?>
 
 			<p><?php echo $form->errorSummary($model); ?></p>
@@ -37,4 +41,4 @@ $this->breadcrumbs=array(
 	    </div>	    
     </form>
 </div><br><br><br><br><br><br><br>
-<p><?php echo($model->allsize); ?></p>
+<p><?php echo($model->kode); ?></p>

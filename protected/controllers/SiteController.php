@@ -133,26 +133,25 @@ class SiteController extends Controller
 
 	public function actionCekstok()
 	{	
-		$model=new VStok;
-		
-			// die($_POST['kode']);	
-		
-		
-		$criteria=new CDbCriteria;
-		$criteria->select='warna,allsize';  // hanya memilih kolom 'title'
-		$criteria->condition='kode=:kode';
-		$criteria->params=array(':kode'=>'BTC 131');
-		$model=VStok::model()->find($criteria); // $params tidak diperlukan
+		// $model=new VStok;		
+		// $criteria=new CDbCriteria;
+		// $criteria->select='warna,allsize'; 
+		// $criteria->condition='kode=:kode';
+		// $criteria->params=array(':kode'=>'DWC 262');
+		// $model=VStok::model()->find($criteria);		
+		// $this->render('CekStok',array('model'=>$model));
 
-		// $model->allsize=$data;
-		$this->render('CekStok',array('model'=>$model));
+		$model = new CariForm;
+		if(isset($_POST['CariForm'])){					
+            $model->attributes = $_POST['CariForm'];
+            if($model->validate()){
+            	die('Stop here');                
+                Yii::app()->user->setFlash('cari','Data berhasil dikirim.');
+                $this->refresh();
+            }
+        }
+		$this->render('CekStok', array('model'=>$model));
 	}
-
-	// public function actionImportStok()
-	// {
-	// 	Yii::app()->user->setFlash('success', "Ini adalah percobaan menggunakan Alert");
-	// 	$this->render('ImportStok');	
-	// }
 
 	public function actionTentangKami()
 	{
