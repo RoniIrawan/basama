@@ -39,4 +39,4 @@ $this->breadcrumbs=array(
 	    </div>	    
     </form>
 </div><br><br><br><br><br><br><br>
-<p><?php echo($model->kode); ?></p>
+<p><?php echo($model->allsize); ?></p>

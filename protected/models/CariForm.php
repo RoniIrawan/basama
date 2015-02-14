@@ -1,6 +1,7 @@
 <?php
 class CariForm extends CFormModel {
-    public $kode;   
+    public $kode;
+    public $allsize;   
 
     public function rules() {
         return array(
@@ -13,5 +14,14 @@ class CariForm extends CFormModel {
             'kode' => 'Kode',
         );
     }
+
+    public static function cariStok(){
+        $data = Yii::app()->db->createCommand()
+        ->select('allsize')
+        ->from('v_stok')        
+        ->where('kode=:kode', array(':kode'=>'YIC 437'))
+        ->queryRow();
+        die($data);
+        return $data;
+    }
 }
-?>

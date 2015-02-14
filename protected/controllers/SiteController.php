@@ -144,9 +144,8 @@ class SiteController extends Controller
 		$model = new CariForm;		
 		if(isset($_GET['CariForm'])){					
             $model->attributes = $_GET['CariForm'];            
-            if($model->validate()){            	
-                // Yii::app()->user->setFlash('cari','Data berhasil dikirim.');                
-             
+            if($model->validate()){            	                
+            	$model = CariForm::model()->cariStok(); 
             }
         }
 		$this->render('CekStok', array('model'=>$model));
