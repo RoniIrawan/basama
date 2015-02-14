@@ -141,13 +141,12 @@ class SiteController extends Controller
 		// $model=VStok::model()->find($criteria);		
 		// $this->render('CekStok',array('model'=>$model));
 
-		$model = new CariForm;
-		if(isset($_POST['CariForm'])){					
-            $model->attributes = $_POST['CariForm'];
-            if($model->validate()){
-            	die('Stop here');                
-                Yii::app()->user->setFlash('cari','Data berhasil dikirim.');
-                $this->refresh();
+		$model = new CariForm;		
+		if(isset($_GET['CariForm'])){					
+            $model->attributes = $_GET['CariForm'];            
+            if($model->validate()){            	
+                // Yii::app()->user->setFlash('cari','Data berhasil dikirim.');                
+             
             }
         }
 		$this->render('CekStok', array('model'=>$model));

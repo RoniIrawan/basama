@@ -25,9 +25,7 @@ $this->breadcrumbs=array(
                 'validateOnSubmit' => true,
              	),
 			 'htmlOptions'=>array('enctype'=>'multipart/form-data'),			
-			)); ?>
-
-			<p><?php echo $form->errorSummary($model); ?></p>
+			)); ?>		
 
 			<?php echo $form->textField($model,'kode', array(
 			'style'=>'text-transform: uppercase',
