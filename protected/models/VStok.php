@@ -51,8 +51,8 @@
 class VStok extends CActiveRecord
 {
 	public $kode;
-	public $warna='MERAH';
-	public $allsize=0;
+	public $warna;
+	public $allsize;
 
 	/**
 	 * @return string the associated database table name
