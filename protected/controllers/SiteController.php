@@ -138,7 +138,7 @@ class SiteController extends Controller
             $model->attributes = $_GET['VStok'];            
             if($model->validate()){            	                
 		        $criteria=new CDbCriteria;
-				$criteria->select='warna,allsize'; 
+				$criteria->select='size,qty'; 
 				$criteria->condition='kode=:kode';
 				$criteria->params=array(':kode'=>$model->kode);
 				$model=VStok::model()->find($criteria);
@@ -194,7 +194,7 @@ class SiteController extends Controller
 	           $model->BerkasCbr = CUploadedFile::getInstance($model, 'BerkasCbr');	           
 	           $model->BerkasCbr->saveAs(Yii::app()->basePath . '/../upload/cbrsix/'.$model->BerkasCbr->getName());
 	           
-	        	$sql="truncate table stokcbrsix";
+	        	$sql="truncate table cbrstok";
 				$connection=Yii::app()->db;
 				$command=$connection->createCommand($sql);
 				$rowCount=$command->execute();

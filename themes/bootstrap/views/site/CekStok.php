@@ -38,5 +38,7 @@ $this->breadcrumbs=array(
 
 	    </div>	    
     </form>
-</div><br><br><br><br><br><br><br> 
-<p><?php echo($model->allsize); ?></p>
+</div><br><br><br><br><br>
+<P><?php foreach($model as $data): ?></P>
+<p><?php echo($model->size.$model->qty); ?></p>
+<p><?php endforeach; ?></p>
