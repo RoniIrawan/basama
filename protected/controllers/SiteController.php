@@ -133,16 +133,22 @@ class SiteController extends Controller
 
 	public function actionCekstok()
 	{	
-		$model = new VStok;		
+		$model = new VStok('search');		
 		if(isset($_GET['VStok'])){					
             $model->attributes = $_GET['VStok'];            
             if($model->validate()){            	                
-		        $criteria=new CDbCriteria;
-				$criteria->select='size,qty'; 
-				$criteria->condition='kode=:kode';
-				$criteria->params=array(':kode'=>$model->kode);
-				$model=VStok::model()->find($criteria);
-            }
+				// $criteria=new CDbCriteria;
+				// $criteria->select='size,qty';				
+				// $criteria->condition='kode=:kode';
+				// $criteria->params=array(':kode'=>$model->kode);				
+				// $model=VStok::model()->find($criteria);
+
+            	$criteria = new CDbCriteria;
+            	$criteria->condition = 'kode=:kode';
+            	$criteria->params = array(':kode' => $model->kode);
+            	$model = VStok::model()->findAll($criteria);
+            	var_dump($model);
+            }            
         }
 		$this->render('CekStok', array('model'=>$model));
 	}
