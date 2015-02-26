@@ -40,9 +40,13 @@ $this->breadcrumbs=array(
 
 	    </div>	    
     </form>
+<<<<<<< HEAD
 </div><br><br><br><br><br>
 <!-- <P><?php foreach($model as $data): ?></P>
 <p><?php echo($model->size.$model->qty); ?></p>
 <p><?php endforeach; ?></p> -->
 
 <?php echo CHtml::encode($model->size); ?>
+=======
+</div><br><br><br><br><br>
+>>>>>>> 83f8b7e68fe796b1a51cde14a77d921a5c616415
