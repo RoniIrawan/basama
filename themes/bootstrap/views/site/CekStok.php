@@ -28,10 +28,12 @@ $this->breadcrumbs=array(
 			)); ?>		
 
 			<?php echo $form->textField($model,'kode', array(
-			'style'=>'text-transform: uppercase',
-			'maxlength'=>'7',
-			'class'=>'span3 search-query text-center',
-			'placeholder'=>'Masukan Kode Barang')); ?>
+				'style'=>'text-transform: uppercase',
+				'maxlength'=>'7',
+				'class'=>'span3 search-query text-center',
+				'placeholder'=>'Masukan Kode Barang'
+			)); ?>
+			
 			<?php echo CHtml::submitButton('Cek Stok', array('class' => 'btn btn-primary')); ?>
 
 		    <?php $this->endWidget(); ?>
@@ -39,6 +41,8 @@ $this->breadcrumbs=array(
 	    </div>	    
     </form>
 </div><br><br><br><br><br>
-<P><?php foreach($model as $data): ?></P>
+<!-- <P><?php foreach($model as $data): ?></P>
 <p><?php echo($model->size.$model->qty); ?></p>
-<p><?php endforeach; ?></p>
+<p><?php endforeach; ?></p> -->
+
+<?php echo CHtml::encode($model->size); ?>

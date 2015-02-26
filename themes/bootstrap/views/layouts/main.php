@@ -9,7 +9,7 @@
     
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	<link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" type="image/x-icon" />
-	<?php Yii::app()->bootstrap->register(); ?>	
+	<?php Yii::app()->bootstrap->register(); ?>
 </head>
 
 <body>
@@ -46,19 +46,6 @@
 
 
 	<?php echo $content; ?>
-
-<!-- 	<?php 
-		$flashMessages = Yii::app()->user->getFlashes();
-		if ($flashMessages) {
-			foreach ($flashMessages as $key => $message) { ?>
-				<script type="text/javascript">$(".alert").alert('close');</script>
-				<div class="alert alert-success">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Peringatan! </strong><?php echo $message; ?>
-			    </div>	
-			<?php }
-		}
-	 ?> -->
 	 
 	<div class="clear"></div>
 

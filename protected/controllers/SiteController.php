@@ -137,7 +137,7 @@ class SiteController extends Controller
 		if(isset($_GET['VStok'])){					
             $model->attributes = $_GET['VStok'];            
             if($model->validate()){            	                
-		        $criteria=new CDbCriteria;
+				$criteria=new CDbCriteria;
 				$criteria->select='size,qty'; 
 				$criteria->condition='kode=:kode';
 				$criteria->params=array(':kode'=>$model->kode);
